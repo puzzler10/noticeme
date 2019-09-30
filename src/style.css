@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'charterbold';
+    src: url('fonts/charter_bold-webfont.eot');
+    src: url('fonts/charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/charter_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterregular';
+    src: url('fonts/charter_regular-webfont.eot');
+    src: url('fonts/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ////////////////////// GLOBAL  ///////////////////// */
+:root{
+    --app-width: 620px; 
+    --note-width: 200px; 
+    background: rgba(123, 100, 100, 0.173);
+}
+* {
+    box-sizing: border-box;
+}
+#root {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+#app {
+    width: var(--app-width)
+}
+
+h1 {
+    font-family: "charterbold"; 
+    text-align: center; 
+}
+h2, h3, p  {
+    font-family: "charterregular", "sans-serif"; 
+    text-align: center; 
+}
+
+button {
+    width: 100px;
+    background-color: rgb(34, 16, 202); 
+    color: rgb(255, 251, 0)
+}
+/* ////////////////////// NOTE  ///////////////////// */
+.note {
+    width: var(--note-width); 
+    font-size: 16px;
+    font-family: 'charterregular', "sans-serif"; 
+    color: rgb(255, 255, 255);
+    padding: 15 15 15 15;
+    margin-bottom: 10px; 
+    position: relative; 
+    transition: box-shadow 0.2s;
+}
+.note:hover {
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.37);
+} 
+
+.note .delete {
+    font-size: 16px; 
+    position: absolute; 
+    right: 10px; 
+    top: 5px; 
+    cursor: pointer; 
+}
+
+/* ////////////////////// NOTE GRID  ///////////////////// */
+#notes-grid {
+    max-width: var(--app-width); 
+
+}
+
+
+
+/* ////////////////////// NOTE EDITOR  ///////////////////// */
+
+#editor{
+    width: var(--app-width); 
+    position: relative; 
+}
+#editor #editortext {
+    width: 100%; 
+    max-width: 100%; 
+    height: 130px; 
+    resize: none; 
+    display: block;   /*we want this by itself */
+    padding: 10 10 50 10;
+    font-size: 14px; 
+    margin-bottom: 15px; 
+    font-family: 'charterregular', sans-serif; 
+}
+#editor .jscolor{
+    position: absolute;
+    right: 120px; 
+    bottom: 10px;
+    width: 100px; 
+    height: 30px;
+    font-size: 15px;
+    padding: 3 3 3 7; 
+    
+}
+#editor #submitButton{
+    position: absolute; 
+    width: 100px; 
+    font-size: 16px;
+    right: 15px; 
+    bottom: 10px;
+    height: 30px;  
+}
+
+/* ////////////////////// FOOTER  ///////////////////// */
+
+footer {
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+}
+
